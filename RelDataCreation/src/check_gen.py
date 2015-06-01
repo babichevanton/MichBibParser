@@ -13,27 +13,45 @@ def find_attr(post, attr):
 
     result = []
     res_cand = 'BUG'
-    mindist = maxint
+    similarity = (0, maxint)
     window_size = len(attr.split(' '))
+
+    # preprocessing
     punct = punctuation
     punct.replace('-', '')
     for char in filter(post.__contains__, punct):
         post.replace(char, u' ')
     tokens = filter(lambda x: x not in punctuation or x is '-', post).upper().split(" ")
-    tokens = zip(tokens, range(len(tokens)))
+    # tokens = zip(tokens, range(len(tokens)))
 
-    for i in xrange(len(tokens) - window_size):
-        for j in range(window_size + 1)[-1::-1]:
+    # matching
+    for i in range(1, window_size + 1)[-1::-1]:
+        for j in xrange(len(tokens) - i + 1):
             cand = ''
             cand_ind = []
-            for k in xrange(window_size + 1):
-                if k != j:
-                    cand += tokens[i + k][0] + ' '
-                    cand_ind.append(tokens[i + k][1])
+            for k in xrange(i):
+                cand += tokens[j + k] + ' '
+                cand_ind.append(j + k)
             cand = cand.strip()
+            # Levenshtein
+            #TODO paste something more complicated
+            tok_prefixes = 0
+            attr_tokens = map(lambda x: [x, True], attr.upper().split(' '))
+            cand_tokens = cand.split(' ')
+            cand_tokens.sort(key=len, reverse=True)
+            cand_tokens = map(lambda x: [x, True], cand_tokens)
+            for attr_ind in xrange(len(attr_tokens)):
+                for tok_ind in xrange(len(cand_tokens)):
+                    # more length - first. Initials will be the last to match
+                    if cand_tokens[tok_ind][1] and attr_tokens[attr_ind][1] and \
+                            attr_tokens[attr_ind][0].startswith(cand_tokens[tok_ind][0]):
+                        tok_prefixes += 1
+                        cand_tokens[tok_ind][1] = False
+                        attr_tokens[attr_ind][1] = False
+                        break
             dist = levenshtein(unicode(cand), unicode(attr.upper()))
-            if dist < mindist:
-                mindist = dist
+            if tok_prefixes > similarity[0] or (tok_prefixes == similarity[0] and dist < similarity[1]):
+                similarity = (tok_prefixes, dist)
                 result = cand_ind
                 res_cand = cand
     res = zip(res_cand.split(), result)
