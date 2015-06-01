@@ -17,11 +17,8 @@ def find_attr(post, attr):
     window_size = len(attr.split(' '))
 
     # preprocessing
-    punct = punctuation
-    punct.replace('-', '')
-    for char in filter(post.__contains__, punct):
-        post.replace(char, u' ')
-    tokens = filter(lambda x: x not in punctuation or x is '-', post).upper().split(" ")
+    attr = filter(lambda x: x not in punctuation or x is '-', attr).upper().split(' ')
+    tokens = filter(lambda x: x not in punctuation or x is '-', post).upper().split(' ')
     # tokens = zip(tokens, range(len(tokens)))
 
     # matching
@@ -36,7 +33,7 @@ def find_attr(post, attr):
             # Levenshtein
             #TODO paste something more complicated
             tok_prefixes = 0
-            attr_tokens = map(lambda x: [x, True], attr.upper().split(' '))
+            attr_tokens = map(lambda x: [x, True], attr)
             cand_tokens = cand.split(' ')
             cand_tokens.sort(key=len, reverse=True)
             cand_tokens = map(lambda x: [x, True], cand_tokens)
@@ -49,7 +46,7 @@ def find_attr(post, attr):
                         cand_tokens[tok_ind][1] = False
                         attr_tokens[attr_ind][1] = False
                         break
-            dist = levenshtein(unicode(cand), unicode(attr.upper()))
+            dist = levenshtein(unicode(cand), unicode(' '.join(attr)))
             if tok_prefixes > similarity[0] or (tok_prefixes == similarity[0] and dist < similarity[1]):
                 similarity = (tok_prefixes, dist)
                 result = cand_ind
@@ -57,7 +54,7 @@ def find_attr(post, attr):
     res = zip(res_cand.split(), result)
     temp = copy(res)
     for tok in temp:
-        if substr(attr.upper(), tok[0]) < 0:
+        if substr(' '.join(attr), tok[0]) < 0:
             res.remove(tok)
     return map(lambda x: x[1], res)
 
