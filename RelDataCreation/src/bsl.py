@@ -3,7 +3,7 @@ from copy import deepcopy
 
 class BlockingSchemeLearner():
     def __init__(self, datastore, first, last):
-        self.reference_set = deepcopy(datastore.get_base()[first - 1:last])
+        self.reference_set = deepcopy(list(set(datastore.get_base()))[first - 1:last])
 
     def get_rs(self):
         return self.reference_set

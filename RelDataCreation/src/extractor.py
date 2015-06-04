@@ -1,5 +1,6 @@
 from sklearn.linear_model import LogisticRegression
 import sys
+import json
 import pickle
 from copy import deepcopy
 import numpy as np
@@ -48,24 +49,27 @@ class PostExplorer():
     def create_scores(self, str1, str2, tok_sc=True):
         vector = []
 
-        # token scores
-        if tok_sc:
-            vector.append(jaccard(str1.split(" "), str2.split(" ")))
+        try:
+            # token scores
+            if tok_sc:
+                vector.append(jaccard(str1.split(u" "), str2.split(u" ")))
 
-        # edit scores
-        str1 = unicode(str1)
-        str2 = unicode(str2)
-        vector.append(levenshtein(str1, str2))
-        vector.append(smith_waterman(str1, str2))
-        vector.append(1 - jaro_winkler(str1, str2))
+            # edit scores
+            str1 = unicode(str1)
+            str2 = unicode(str2)
+            vector.append(levenshtein(str1, str2))
+            vector.append(smith_waterman(str1, str2))
+            vector.append(1 - jaro_winkler(str1, str2))
 
-        # other scores
-        tokstr1 = " ".join([porter_stem(tok) for tok in str1.split(" ")])
-        tokstr2 = " ".join([porter_stem(tok) for tok in str2.split(" ")])
-        vector.append(levenshtein(tokstr1, tokstr2))
-        sndstr1 = unicode(" ".join([soundex(tok) for tok in str1.split(" ")]))
-        sndstr2 = unicode(" ".join([soundex(tok) for tok in str2.split(" ")]))
-        vector.append(levenshtein(sndstr1, sndstr2))
+            # other scores
+            tokstr1 = u" ".join([porter_stem(tok) for tok in str1.split(u" ")])
+            tokstr2 = u" ".join([porter_stem(tok) for tok in str2.split(u" ")])
+            vector.append(levenshtein(tokstr1, tokstr2))
+            sndstr1 = unicode(u" ".join([soundex(tok) for tok in str1.split(u" ")]))
+            sndstr2 = unicode(u" ".join([soundex(tok) for tok in str2.split(u" ")]))
+            vector.append(levenshtein(sndstr1, sndstr2))
+        except UnicodeDecodeError:
+            return -1
         return vector
 
     def create_RLscores(self, str1, str2):
@@ -80,23 +84,30 @@ class PostExplorer():
             numofattr = self.count
         else:
             numofattr = len(self.attributes)
-        for ind in xrange(numofattr):
-            for attr_name in cand:
-                if self.attributes[ind] == attr_name:
-                    if rl:
-                        vector = self.create_RLscores(text, cand[attr_name])
-                    else:
-                        vector = self.create_IEscores(text, cand[attr_name])
-                    break
-            else:
-                if rl:
-                    vector = self.create_RLscores(text, "")
+        try:
+            for ind in xrange(numofattr):
+                for attr_name in cand:
+                    if self.attributes[ind] == attr_name:
+                        if rl:
+                            vector = self.create_RLscores(text, cand[attr_name])
+                        else:
+                            vector = self.create_IEscores(text, cand[attr_name])
+                        break
                 else:
-                    vector = self.create_IEscores(text, "")
-            cand_features.extend(vector)
-        if rl:
-            vector = self.create_RLscores(text, " ".join(cand.values()))
-            cand_features.extend(vector)
+                    if rl:
+                        vector = self.create_RLscores(text, "")
+                    else:
+                        vector = self.create_IEscores(text, "")
+                if vector == -1:
+                    raise ValueError()
+                cand_features.extend(vector)
+            if rl:
+                vector = self.create_RLscores(text, " ".join(cand.values()))
+                if vector == -1:
+                    raise ValueError()
+                cand_features.extend(vector)
+        except ValueError:
+            return -1
         return cand_features
 
     def createV_rl(self, post, cand):
@@ -121,19 +132,32 @@ class PostExplorer():
     def svm_train(self, store, begin, end):
         vectors = []
         targets = []
+        bad = 0
+        print 'Training SVM'
         for ind in xrange(begin - 1, end):
-            vectors.append(self.createV_rl(store.get_names()[ind], store.get_base()[ind]))  # positive example
-            targets.append(1)
-            vectors.append(self.createV_rl(store.get_names()[begin + end - 2 - ind], store.get_base()[ind]))  # negative
-            targets.append(-1)
+            vect = self.createV_rl(store.get_names()[ind], store.get_base()[ind])
+            if vect != -1:
+                vectors.append(vect)  # positive example
+                targets.append(1)
+            else:
+                bad += 1
+            vect = self.createV_rl(store.get_names()[begin + end - 2 - ind], store.get_base()[ind])
+            if vect != -1:
+                vectors.append(vect)  # negative
+                targets.append(-1)
+            else:
+                bad += 1
             print ind, end - 1
+        print bad, 'bad samples'
         features = self.binary_rescoring(vectors)
         self.schema_classifier.fit(features, targets)
 
     def svm_predict(self, post, cands):
         vectors = []
         for cand in cands:
-            vectors.append(self.createV_rl(post.content, cand))
+            vect = self.createV_rl(post.content, cand)
+            if vect != -1:
+                vectors.append(vect)
         features = self.binary_rescoring(vectors)
         predictions = self.schema_classifier.predict_proba(features)
         max_proba = 0
@@ -147,11 +171,12 @@ class PostExplorer():
     def multisvm_train(self, store, begin, end):
         vectors = []
         classes = []
+        bad = 0
         if self.count < len(self.attributes):
             numofattr = self.count
         else:
             numofattr = len(self.attributes)
-        print "Training MultiSVM"
+        print "Training Multinimial Logistic Regression"
         for ind in xrange(begin - 1, end):
             for attr_name in store.get_base()[ind]:
                 for attr_ind in xrange(numofattr):
@@ -159,10 +184,15 @@ class PostExplorer():
                         tokens = store.get_base()[ind][attr_name].split(" ")
                         if tokens:
                             for token in tokens:
-                                vectors.append(np.array(self.createV_ie(token, store.get_base()[ind])))
-                                classes.append(attr_name)
+                                vect = self.createV_ie(token, store.get_base()[ind])
+                                if vect != -1:
+                                    vectors.append(np.array(vect))
+                                    classes.append(attr_name)
+                                else:
+                                    bad += 1
                             break
             print ind, end - 1
+        print bad, 'bad samples'
         self.attr_code = {}
         encoding = {}
         for one_class in classes:
@@ -184,7 +214,9 @@ class PostExplorer():
         vectors = []
         tokens = post.content.split(" ")
         for token in tokens:
-            vectors.append(np.array(self.createV_ie(token, schema)))
+            vect = self.createV_ie(token, schema)
+            if vect != -1:
+                vectors.append(np.array(vect))
         predictions_prob = self.attr_classifier.predict_proba(np.array(vectors))
         predictions = []
         for prediction in predictions_prob:
@@ -199,7 +231,7 @@ class PostExplorer():
         removing_candidate = -1
         whole_attr = " ".join(tokens)
         jac_base = jaccard(whole_attr.split(" "), attr.split(" "))
-        jarwin_base = jaro_winkler(whole_attr, attr)
+        jarwin_base = jaro_winkler(unicode(whole_attr), unicode(attr))
         attr_tokens = [(tokens[ind], ind) for ind in xrange(len(tokens))]
         processing = True
         while processing:
@@ -209,7 +241,7 @@ class PostExplorer():
                 whole_attr.remove(attr_tokens[cand_ind])
                 whole_attr = " ".join([token[0] for token in whole_attr])
                 cur_jac = jaccard(whole_attr.split(" "), attr.split(" "))
-                cur_jarwin = jaro_winkler(whole_attr, attr)
+                cur_jarwin = jaro_winkler(unicode(whole_attr), unicode(attr))
                 if cur_jac < jac_base and cur_jarwin < jarwin_base:
                     removing_candidate = cand_ind
                     jac_base = cur_jac
@@ -241,9 +273,11 @@ class PostExplorer():
             for ind in token_indices:
                 labels[ind] = token_indices[ind]
         self.attr_code[-1] = "junk"
-        output = ""
+        res = []
         for ind in xrange(len(tokens)):
-            output += tokens[ind] + " " + self.attr_code[labels[ind]] + "\n"
-        output += "\n"
-        with open(res_file, "at") as res:
-            res.write(output)
+            res.append((tokens[ind], self.attr_code[labels[ind]]))
+        with open(res_file, "r") as input:
+            data = json.load(input)
+        data.append(res)
+        with open(res_file, "w") as output:
+            json.dump(data, output)

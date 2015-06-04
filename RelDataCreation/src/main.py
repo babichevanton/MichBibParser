@@ -1,3 +1,4 @@
+import sys
 from data import DataStore, Post
 from bsl import BlockingSchemeLearner
 from extractor import PostExplorer
@@ -6,13 +7,13 @@ from extractor import PostExplorer
 if __name__ == "__main__":
     datadir = "../data/"
 
-    itemsfile = "samples.json"
-    postsfile = "posts.txt"
+    itemsfile = sys.argv[2]
+    postsfile = sys.argv[1]
 
-    storebase_size = 2000       # number of elements in dataset
-    RS_size = 500              # number of elements in Reference Set
-    SVMtrain_size = 1000        # number of SVM train items
-    multiSVMtrain_size = 100   # number of Multi-ClassSVM train items
+    storebase_size = 7000       # number of elements in dataset
+    RS_size = 2000              # number of elements in Reference Set
+    SVMtrain_size = 7000        # number of SVM train items
+    multiSVMtrain_size = 7000   # number of Multi-ClassSVM train items
     numofattrs = 5              # number of checking attributes
 
     with open(datadir + postsfile, "rt") as pfile:
@@ -52,4 +53,4 @@ if __name__ == "__main__":
 
         attrs = pexpl.multisvm_predict(post, schema)
 
-        pexpl.results(post, attrs, schema, datadir + "res.txt")
+        pexpl.results(post, attrs, schema, datadir + "res.json")
