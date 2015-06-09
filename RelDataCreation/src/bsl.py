@@ -3,7 +3,7 @@ from copy import deepcopy
 
 class BlockingSchemeLearner():
     def __init__(self, datastore, first, last):
-        self.reference_set = deepcopy(list(set(datastore.get_base()))[first - 1:last])
+        self.reference_set = deepcopy(datastore.get_base()[first - 1:last])
 
     def get_rs(self):
         return self.reference_set
@@ -22,13 +22,12 @@ class BlockingSchemeLearner():
         result = []
 
         coeff = 0.35
-        num_of_unrec_attrs = 2
+        num_of_unrec_attrs = 1
 
         counter = 0
         unrec_attr = 0
         for cand in self.reference_set:
             counter += 1
-            print counter, len(self.reference_set)
             unrec_attr = 0
             for attr_name in cand:
                 if cand[attr_name] == '':
@@ -48,6 +47,7 @@ class BlockingSchemeLearner():
             if unrec_attr <= num_of_unrec_attrs:
                 # cand is close enough to post
                 result.append(cand)
+            print counter, len(self.reference_set)
         if not result:
             print unrec_attr
 

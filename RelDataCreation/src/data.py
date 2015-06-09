@@ -64,7 +64,8 @@ class Post():
         result = "BUG"
         mindist = maxint
         window_size = len(attr.split(" "))
-        tokens = filter(lambda x: x not in punctuation, self.content).upper().split(" ")
+        tokens = filter(lambda x: x not in punctuation or x is '-', self.content).upper().split(" ")
+        attr_toks = filter(lambda x: x not in punctuation or x is '-', attr).upper()
         for i in xrange(len(tokens) - window_size):
             for j in range(window_size + 1)[-1::-1]:
                 cand = ""
@@ -72,7 +73,7 @@ class Post():
                     if k != j:
                         cand += tokens[i + k] + " "
                 cand = cand.strip()
-                dist = edit_distance(cand, attr)
+                dist = edit_distance(cand, attr_toks)
                 if dist < mindist:
                     mindist = dist
                     result = cand
