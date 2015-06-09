@@ -101,7 +101,7 @@ class ReferenceStore():
                 self.samples.extend(samples)
             print str(i) + '/' + str(len(self.data)), id
             # if i == 1:
-            if i == 2100:
+            if i == 100:
                 break
 
     def save(self, filename):
@@ -181,13 +181,19 @@ class ReferenceExtractor():
             tokens.extend(self.get_tokens(self.strings[index]))
             matches = self.num_of_matches(tokens, reference_form_meta)
 
+        res_index = index
         strings = self.strings[beginning:index]
         res = ' '.join(strings)
-
-        if matches > len(self.get_tokens(res)) * 0.6:
-            return res
-        # print 'Yay!'
-        return ''
+        while matches < len(self.get_tokens(res)) * 0.6:
+            res_index -= 1
+            strings = self.strings[beginning:res_index]
+            if not strings:
+                res = ' '.join(strings)
+                matches = self.num_of_matches(self.get_tokens(res), reference_form_meta)
+            else:
+                res = ''
+                break
+        return res
 
     def get_tokens(self, str):
         tmp = re.sub(" +", " ", str.strip())
