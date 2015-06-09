@@ -62,7 +62,7 @@ def find_attr(post, attr):
 if __name__ == '__main__':
 
     dir = '../data/'
-    file = 'samples.json'
+    file = 'samples_v2.json'
 
     attrs = [u'author', u'publisher', u'title', u'year', u'pages']
 

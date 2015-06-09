@@ -53,7 +53,6 @@ class ReferenceStore():
         except ValueError:
             print '\tCan\'t find References'
             return []
-        refs = []
         table = {}
         # Begin finding references. Build table of assignings.
         for ref in item["refs"]:
@@ -62,14 +61,36 @@ class ReferenceStore():
                 continue
             metadata = self.data[ref]["info"]
             if train:
-                table[ref] = refextr.find_raw(metadata, table=True)
+                table[ref] = refextr.find_row(metadata)
             else:
-                refs.append({'name': refextr.find_raw(metadata, clusterizer=self.cl), 'attr': self.data[ref]['info']})
+                table[ref] = refextr.find_row(metadata, clusterizer=self.cl)
         # return refs
         if train:
             return table
         else:
-            return table
+            # table - table of probabilities
+            refs = []
+            beginnings = [True] * len(refextr.strings)
+            table_refs = table.keys()
+            # more probable first
+            table_refs.sort(key=lambda x: max(table[x]), reverse=True)
+            for ref in table_refs:
+                metadata = self.data[ref]["info"]
+                while 1:
+                    begin_ind = table[ref].index(max(table[ref]))
+                    if table[ref][begin_ind] and beginnings[begin_ind]:
+                        beginnings[begin_ind] = False
+                        ref_string = refextr.get_ref(begin_ind, metadata)
+                        if ref_string != '':
+                            refs.append({'name': ref_string, 'attr': self.data[ref]['info']})
+                        break
+                    elif table[ref][begin_ind] < 0.000001:
+                        # if there is no cands just process next ref
+                        break
+                    else:
+                        # try find another
+                        table[ref][begin_ind] = 0.0
+            return refs
 
     def parse(self):
         i = 0
@@ -79,8 +100,8 @@ class ReferenceStore():
             if samples:
                 self.samples.extend(samples)
             print str(i) + '/' + str(len(self.data)), id
-            if i == 1:
-            # if i == 2100:
+            # if i == 1:
+            if i == 2100:
                 break
 
     def save(self, filename):
@@ -123,9 +144,9 @@ class ReferenceExtractor():
     def get_begin(self, row):
         return row.index(max(row))
 
-    def find_raw(self, metadata, table=False, clusterizer=None):
+    def find_row(self, metadata, clusterizer=None):
         row = self.get_table_row(metadata)
-        if not table:
+        if clusterizer:
             success_cluster = clusterizer.predict(1.0)[0]
             # filter bad assignings by clusterization
             for ind in xrange(len(row)):
@@ -137,37 +158,36 @@ class ReferenceExtractor():
                 sum = 1
             for ind in xrange(len(row)):
                 row[ind] = row[ind] * 1.0 / sum
-            # TODO Find best assignings
-            # beginning of reference is found - it's 'beginning'
-            beginning = self.get_begin(row)
-            tokens = []
-            index = beginning - 1
-            reference_form_meta = filter(lambda x: x != "AND", self.get_tokens(metadata["author"]))
-            reference_form_meta.extend(self.get_tokens(metadata['title']))
-            if 'publisher' in metadata:
-                reference_form_meta.extend(self.get_tokens(metadata['publisher']))
-            if 'year' in metadata:
-                reference_form_meta.extend(self.get_tokens(metadata['year']))
-            if 'pages' in metadata:
-                reference_form_meta.extend(self.get_tokens(metadata['pages']))
-            prev_matches = -1
-            matches = 0
-            while matches > prev_matches:
-                prev_matches = matches
-                index += 1
-                if len(self.strings) <= index:
-                    break
-                tokens.extend(self.get_tokens(self.strings[index]))
-                matches = self.num_of_matches(tokens, reference_form_meta)
+        return row
 
-            # print 'Yay!'
-            strings = self.strings[beginning:index]
-            res = ' '.join(strings)
+    def get_ref(self, beginning, metadata):
+        tokens = []
+        index = beginning - 1
+        reference_form_meta = filter(lambda x: x != "AND", self.get_tokens(metadata["author"]))
+        reference_form_meta.extend(self.get_tokens(metadata['title']))
+        if 'publisher' in metadata:
+            reference_form_meta.extend(self.get_tokens(metadata['publisher']))
+        if 'year' in metadata:
+            reference_form_meta.extend(self.get_tokens(metadata['year']))
+        if 'pages' in metadata:
+            reference_form_meta.extend(self.get_tokens(metadata['pages']))
+        prev_matches = -1
+        matches = 0
+        while matches > prev_matches:
+            prev_matches = matches
+            index += 1
+            if len(self.strings) <= index:
+                break
+            tokens.extend(self.get_tokens(self.strings[index]))
+            matches = self.num_of_matches(tokens, reference_form_meta)
 
+        strings = self.strings[beginning:index]
+        res = ' '.join(strings)
+
+        if matches > len(self.get_tokens(res)) * 0.6:
             return res
-        else:
-            return row
-            # return max(row)
+        # print 'Yay!'
+        return ''
 
     def get_tokens(self, str):
         tmp = re.sub(" +", " ", str.strip())
