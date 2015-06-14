@@ -1,4 +1,6 @@
 import sys
+from time import time
+import json
 from data import DataStore, Post
 from bsl import BlockingSchemeLearner
 from extractor import PostExplorer
@@ -7,19 +9,20 @@ from extractor import PostExplorer
 if __name__ == "__main__":
     datadir = "../data/"
 
-    itemsfile = 'samples_v2.json'
-    postsfile = 'posts.txt'
+    itemsfile = 'samples.json'
+    postsfile = 'new_check.json'
     # itemsfile = sys.argv[2]
     # postsfile = sys.argv[1]
 
-    storebase_size = 2000       # number of elements in dataset
-    RS_size = 2000              # number of elements in Reference Set
-    SVMtrain_size = 2000        # number of SVM train items
-    multiSVMtrain_size = 2000   # number of Multi-ClassSVM train items
+    storebase_size = 10000       # number of elements in dataset
+    RS_size = 10000              # number of elements in Reference Set
+    SVMtrain_size = 10000        # number of SVM train items
+    multiSVMtrain_size = 10000   # number of Multi-ClassSVM train items
     numofattrs = 5              # number of checking attributes
 
-    with open(datadir + postsfile, "rt") as pfile:
-        posts = [post.strip() for post in pfile.readlines()]
+    with open(datadir + postsfile, "r") as pfile:
+        check_data = json.load(pfile)
+    posts = [post[0].strip() for post in check_data]
 
     store = DataStore()
     store.init_base(datadir + itemsfile, storebase_size)
@@ -40,19 +43,25 @@ if __name__ == "__main__":
                          multiSVMtrain_size,
                          datadir + "decode.pkl")
 
-    for text in posts[:1]:
+    i = 0
+    for text in posts[:3]:
+        i += 1
+        tm = time()
         post = Post(text)
 
-        rule = bsl.sequential_covering(post)
+        # rule = bsl.sequential_covering(post)
 
-        cands = bsl.get_candidates(rule)
+        # cands = bsl.get_candidates(rule)
+        cands = bsl.get_rs()
 
-        schema = pexpl.svm_predict(post, cands)
+        schema = pexpl.schema_predict(post, cands)
 
         post.print_cont()
         for attr_name in schema:
             print "    ", attr_name, schema[attr_name]
 
-        attrs = pexpl.multisvm_predict(post, schema)
+        attrs = pexpl.attrs_predict(post, schema)
 
         pexpl.results(post, attrs, schema, datadir + "res.json")
+        process_time = time() - tm
+        print str(i) + '/' + str(len(posts)), process_time

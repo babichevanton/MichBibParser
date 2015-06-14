@@ -62,9 +62,9 @@ def find_attr(post, attr):
 if __name__ == '__main__':
 
     dir = '../data/'
-    file = 'samples_v2.json'
+    file = 'samples.json'
 
-    attrs = [u'author', u'publisher', u'title', u'year', u'pages']
+    attrs = [u'author', u'journal', u'title', u'year', u'pages']
 
     resfile = 'check.json'
 
@@ -73,7 +73,7 @@ if __name__ == '__main__':
 
     res = []
     i = 0
-    for sample in samples[:100]:
+    for sample in samples[:1000]:
         i += 1
         # print sample[u'name']
         attrs_in_post = {}

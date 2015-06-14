@@ -152,7 +152,7 @@ class PostExplorer():
         features = self.binary_rescoring(vectors)
         self.schema_classifier.fit(features, targets)
 
-    def svm_predict(self, post, cands):
+    def schema_predict(self, post, cands):
         vectors = []
         for cand in cands:
             vect = self.createV_rl(post.content, cand)
@@ -210,7 +210,7 @@ class PostExplorer():
         print vectors.shape, targets.shape
         self.attr_classifier.fit(vectors, targets)
 
-    def multisvm_predict(self, post, schema):
+    def attrs_predict(self, post, schema):
         vectors = []
         tokens = post.content.split(" ")
         for token in tokens:

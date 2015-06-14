@@ -3,7 +3,7 @@ import json
 
 dir = 'data/'
 name = 'check.json'
-sfile = 'samples.json'
+sfile = 'samples_v1.json'
 
 res = 'check.txt'
 

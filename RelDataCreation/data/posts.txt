@@ -1,1 +1,0 @@
-Paola Inverardi and Alex Wolf. Formal specication and analysis of software architectures using the chem- ical, abstract machine model. IEEE Transactions on Software Engineering, 1995. To appear.

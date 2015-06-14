@@ -27,10 +27,10 @@ class DataStore():
                 attrs['title'] = attributes['title'].upper()
             else:
                 attrs['title'] = ''
-            if 'publisher' in attributes:
-                attrs['publisher'] = attributes['publisher'].upper()
+            if 'journal' in attributes:
+                attrs['journal'] = attributes['journal'].upper()
             else:
-                attrs['publisher'] = ''
+                attrs['journal'] = ''
             if 'year' in attributes:
                 attrs['year'] = attributes['year'].upper()
             else:

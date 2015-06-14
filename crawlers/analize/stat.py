@@ -37,6 +37,8 @@ def statistic_counter(samples):
 def print_stat(statistics):
     print 'Number of attribute types:', len(statistics)
     for attr_type in statistics:
+        if attr_type != u'journal':
+            continue
         # statistics[attr_type] is a dictionary
         attr = statistics[attr_type].items()
         attr.sort(key=lambda x: x[1], reverse=True)
