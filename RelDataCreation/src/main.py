@@ -1,4 +1,5 @@
 import sys
+from os.path import exists
 from time import time
 import json
 from data import DataStore, Post
@@ -62,6 +63,16 @@ if __name__ == "__main__":
 
         attrs = pexpl.attrs_predict(post, schema)
 
-        pexpl.results(post, attrs, schema, datadir + "res.json")
+        result = pexpl.results(post, attrs, schema)
+
+        if not exists(datadir + "res.json"):
+            with open(datadir + "res.json", 'w') as output:
+                json.dump({}, output)
+        with open(datadir + "res.json", "r") as input:
+            data = json.load(input)
+        data[text] = result
+        with open(datadir + "res.json", "w") as output:
+            json.dump(data, output)
+
         process_time = time() - tm
         print str(i) + '/' + str(len(posts)), process_time

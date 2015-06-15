@@ -256,7 +256,7 @@ class PostExplorer():
                 token_indices[ind] = -1
         return token_indices
 
-    def results(self, post, labels, schema, res_file):
+    def results(self, post, labels, schema):
         tokens = post.content.split(" ")
         label_list = []
         for label in labels:
@@ -276,8 +276,4 @@ class PostExplorer():
         res = []
         for ind in xrange(len(tokens)):
             res.append((tokens[ind], self.attr_code[labels[ind]]))
-        with open(res_file, "r") as input:
-            data = json.load(input)
-        data.append(res)
-        with open(res_file, "w") as output:
-            json.dump(data, output)
+        return res
