@@ -10,10 +10,13 @@ from extractor import PostExplorer
 if __name__ == "__main__":
     datadir = "../data/"
 
-    itemsfile = 'samples.json'
-    postsfile = 'new_check.json'
-    # itemsfile = sys.argv[2]
-    # postsfile = sys.argv[1]
+    # itemsfile = 'samples.json'
+    # postsfile = 'new_check.json'
+    postsfile = sys.argv[1]
+    itemsfile = sys.argv[2]
+    first = int(sys.argv[3])
+    last = int(sys.argv[4])
+    resultfile = sys.argv[5]
 
     storebase_size = 10000       # number of elements in dataset
     RS_size = 10000              # number of elements in Reference Set
@@ -41,11 +44,10 @@ if __name__ == "__main__":
                          datadir + "SVMmodel.model",
                          SVMtrain_size,
                          datadir + "MultiSVMmodel.model",
-                         multiSVMtrain_size,
-                         datadir + "decode.pkl")
+                         multiSVMtrain_size)
 
     i = 0
-    for text in posts[:3]:
+    for text in posts[first:last]:
         i += 1
         tm = time()
         post = Post(text)
@@ -65,13 +67,13 @@ if __name__ == "__main__":
 
         result = pexpl.results(post, attrs, schema)
 
-        if not exists(datadir + "res.json"):
-            with open(datadir + "res.json", 'w') as output:
+        if not exists(datadir + resultfile):
+            with open(datadir + resultfile, 'w') as output:
                 json.dump({}, output)
-        with open(datadir + "res.json", "r") as input:
+        with open(datadir + resultfile, "r") as input:
             data = json.load(input)
         data[text] = result
-        with open(datadir + "res.json", "w") as output:
+        with open(datadir + resultfile, "w") as output:
             json.dump(data, output)
 
         process_time = time() - tm
