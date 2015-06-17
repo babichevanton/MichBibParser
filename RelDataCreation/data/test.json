@@ -11074,11 +11074,11 @@
             ],
             [
                 "R.",
-                "junk"
+                "author"
             ],
             [
                 "(1999).",
-                "junk"
+                "year"
             ],
             [
                 "Planning",
@@ -11114,7 +11114,7 @@
             ],
             [
                 "Articial",
-                "junk"
+                "journal"
             ],
             [
                 "Intelligence,",
@@ -11171,7 +11171,7 @@
             ],
             [
                 "P.",
-                "junk"
+                "author"
             ],
             [
                 "(1995).",
@@ -11224,7 +11224,7 @@
             ],
             [
                 "S.",
-                "junk"
+                "author"
             ],
             [
                 "(1999).",
@@ -11260,11 +11260,11 @@
             ],
             [
                 "leverage.",
-                "junk"
+                "title"
             ],
             [
                 "Articial",
-                "junk"
+                "journal"
             ],
             [
                 "Intelligence,",
@@ -11309,7 +11309,7 @@
             ],
             [
                 "A.",
-                "title"
+                "author"
             ],
             [
                 "(1995).",
@@ -11342,7 +11342,7 @@
         [
             [
                 "Bonet,",
-                "junk"
+                "author"
             ],
             [
                 "B.,",
@@ -11350,15 +11350,15 @@
             ],
             [
                 "&",
-                "junk"
+                "author"
             ],
             [
                 "Gener,",
-                "junk"
+                "author"
             ],
             [
                 "H.",
-                "junk"
+                "author"
             ],
             [
                 "(1998).",
@@ -11366,31 +11366,31 @@
             ],
             [
                 "Learning",
-                "junk"
+                "title"
             ],
             [
                 "sorting",
-                "junk"
+                "title"
             ],
             [
                 "and",
-                "junk"
+                "title"
             ],
             [
                 "classication",
-                "junk"
+                "title"
             ],
             [
                 "with",
-                "junk"
+                "title"
             ],
             [
                 "POMDPs.",
-                "junk"
+                "title"
             ],
             [
                 "In",
-                "title"
+                "junk"
             ]
         ]
     ],
@@ -11415,7 +11415,7 @@
             ],
             [
                 "A.",
-                "junk"
+                "author"
             ],
             [
                 "(1996).",
@@ -11467,23 +11467,23 @@
             ],
             [
                 "Europian",
-                "junk"
+                "journal"
             ],
             [
                 "Conference",
-                "junk"
+                "journal"
             ],
             [
                 "on",
-                "junk"
+                "journal"
             ],
             [
                 "Computer",
-                "junk"
+                "journal"
             ],
             [
                 "Vision,",
-                "junk"
+                "journal"
             ],
             [
                 "pp.",
@@ -11496,7 +11496,7 @@
         ]
     ],
     [
-        "Parr, R., & Russell, S. (1995). Approximating optimal policies for partially observable stochastic domains. In Proceedings of the Fourteenth International Joint Conference on Articial Intelligence, pp. 10881094. Pearl, J. (1988). Probabilistic reasoning in intelligent systems. Morgan Kaufman.",
+        "Parr, R., & Russell, S. (1995). Approximating optimal policies for partially observable stochastic domains. In Proceedings of the Fourteenth International Joint Conference on Articial Intelligence, pp. 10881094.",
         [
             [
                 "Parr,",
@@ -11516,7 +11516,7 @@
             ],
             [
                 "S.",
-                "junk"
+                "author"
             ],
             [
                 "(1995).",
@@ -11572,31 +11572,31 @@
             ],
             [
                 "Fourteenth",
-                "junk"
+                "journal"
             ],
             [
                 "International",
-                "junk"
+                "journal"
             ],
             [
                 "Joint",
-                "junk"
+                "journal"
             ],
             [
                 "Conference",
-                "junk"
+                "journal"
             ],
             [
                 "on",
-                "junk"
+                "journal"
             ],
             [
                 "Articial",
-                "junk"
+                "journal"
             ],
             [
                 "Intelligence,",
-                "junk"
+                "journal"
             ],
             [
                 "pp.",
@@ -11605,46 +11605,6 @@
             [
                 "10881094.",
                 "pages"
-            ],
-            [
-                "Pearl,",
-                "junk"
-            ],
-            [
-                "J.",
-                "junk"
-            ],
-            [
-                "(1988).",
-                "junk"
-            ],
-            [
-                "Probabilistic",
-                "junk"
-            ],
-            [
-                "reasoning",
-                "junk"
-            ],
-            [
-                "in",
-                "junk"
-            ],
-            [
-                "intelligent",
-                "junk"
-            ],
-            [
-                "systems.",
-                "junk"
-            ],
-            [
-                "Morgan",
-                "junk"
-            ],
-            [
-                "Kaufman.",
-                "junk"
             ]
         ]
     ],
@@ -11661,7 +11621,7 @@
             ],
             [
                 "C.",
-                "junk"
+                "author"
             ],
             [
                 "(1995).",
@@ -11751,19 +11711,19 @@
         ]
     ],
     [
-        "Burago, D., Rougemont, M. D., & Slissenko, A. (1996). On the complexity of partially observed Markov decision processes. Theoretical Computer Science, 157, 161183. Cassandra, A. R. (1998). Exact and approximate algorithms for partially observable Markov",
+        "Burago, D., Rougemont, M. D., & Slissenko, A. (1996). On the complexity of partially observed Markov decision processes. Theoretical Computer Science, 157, 161183.",
         [
             [
                 "Burago,",
-                "junk"
+                "author"
             ],
             [
                 "D.,",
-                "junk"
+                "author"
             ],
             [
                 "Rougemont,",
-                "junk"
+                "author"
             ],
             [
                 "M.",
@@ -11771,23 +11731,23 @@
             ],
             [
                 "D.,",
-                "junk"
+                "author"
             ],
             [
                 "&",
-                "junk"
+                "author"
             ],
             [
                 "Slissenko,",
-                "junk"
+                "author"
             ],
             [
                 "A.",
-                "title"
+                "author"
             ],
             [
                 "(1996).",
-                "junk"
+                "year"
             ],
             [
                 "On",
@@ -11795,23 +11755,23 @@
             ],
             [
                 "the",
-                "junk"
+                "title"
             ],
             [
                 "complexity",
-                "junk"
+                "title"
             ],
             [
                 "of",
-                "junk"
+                "title"
             ],
             [
                 "partially",
-                "junk"
+                "title"
             ],
             [
                 "observed",
-                "junk"
+                "title"
             ],
             [
                 "Markov",
@@ -11827,15 +11787,15 @@
             ],
             [
                 "Theoretical",
-                "junk"
+                "journal"
             ],
             [
                 "Computer",
-                "junk"
+                "journal"
             ],
             [
                 "Science,",
-                "junk"
+                "journal"
             ],
             [
                 "157,",
@@ -11843,55 +11803,7 @@
             ],
             [
                 "161183.",
-                "junk"
-            ],
-            [
-                "Cassandra,",
-                "junk"
-            ],
-            [
-                "A.",
-                "junk"
-            ],
-            [
-                "R.",
-                "junk"
-            ],
-            [
-                "(1998).",
-                "junk"
-            ],
-            [
-                "Exact",
-                "junk"
-            ],
-            [
-                "and",
-                "junk"
-            ],
-            [
-                "approximate",
-                "junk"
-            ],
-            [
-                "algorithms",
-                "junk"
-            ],
-            [
-                "for",
-                "junk"
-            ],
-            [
-                "partially",
-                "junk"
-            ],
-            [
-                "observable",
-                "junk"
-            ],
-            [
-                "Markov",
-                "junk"
+                "pages"
             ]
         ]
     ],
@@ -11900,15 +11812,15 @@
         [
             [
                 "Cassandra,",
-                "junk"
+                "author"
             ],
             [
                 "A.",
-                "junk"
+                "author"
             ],
             [
                 "R.,",
-                "junk"
+                "author"
             ],
             [
                 "Littman,",
@@ -11924,47 +11836,47 @@
             ],
             [
                 "&",
-                "junk"
+                "author"
             ],
             [
                 "Zhang,",
-                "junk"
+                "author"
             ],
             [
                 "N.",
-                "junk"
+                "author"
             ],
             [
                 "L.",
-                "junk"
+                "author"
             ],
             [
                 "(1997).",
-                "junk"
+                "year"
             ],
             [
                 "Incremental",
-                "junk"
+                "title"
             ],
             [
                 "pruning:",
-                "junk"
+                "title"
             ],
             [
                 "a",
-                "junk"
+                "title"
             ],
             [
                 "simple,",
-                "junk"
+                "title"
             ],
             [
                 "fast,",
-                "junk"
+                "title"
             ],
             [
                 "exact",
-                "junk"
+                "title"
             ],
             [
                 "algorithm",
@@ -11976,23 +11888,23 @@
             ],
             [
                 "partially",
-                "junk"
+                "title"
             ],
             [
                 "observable",
-                "junk"
+                "title"
             ],
             [
                 "Markov",
-                "junk"
+                "title"
             ],
             [
                 "decision",
-                "junk"
+                "title"
             ],
             [
                 "processes.",
-                "junk"
+                "title"
             ],
             [
                 "In",
@@ -12005,51 +11917,51 @@
         ]
     ],
     [
-        "Boutilier, C., & Poole, D. (1996). Exploiting structure in policy construction. In Proceedings of the Thirteenth National Conference on Articial Intelligence, pp. 11681175. Boyan, J. A., & Moore, A. A. (1995). Generalization in reinforcement learning: safely",
+        "Boutilier, C., & Poole, D. (1996). Exploiting structure in policy construction. In Proceedings of the Thirteenth National Conference on Articial Intelligence, pp. 11681175",
         [
             [
                 "Boutilier,",
-                "junk"
+                "author"
             ],
             [
                 "C.,",
-                "junk"
+                "author"
             ],
             [
                 "&",
-                "junk"
+                "author"
             ],
             [
                 "Poole,",
-                "junk"
+                "author"
             ],
             [
                 "D.",
-                "junk"
+                "author"
             ],
             [
                 "(1996).",
-                "junk"
+                "year"
             ],
             [
                 "Exploiting",
-                "junk"
+                "title"
             ],
             [
                 "structure",
-                "junk"
+                "title"
             ],
             [
                 "in",
-                "junk"
+                "title"
             ],
             [
                 "policy",
-                "junk"
+                "title"
             ],
             [
                 "construction.",
-                "junk"
+                "title"
             ],
             [
                 "In",
@@ -12069,27 +11981,27 @@
             ],
             [
                 "Thirteenth",
-                "junk"
+                "journal"
             ],
             [
                 "National",
-                "junk"
+                "journal"
             ],
             [
                 "Conference",
-                "junk"
+                "journal"
             ],
             [
                 "on",
-                "junk"
+                "journal"
             ],
             [
                 "Articial",
-                "junk"
+                "journal"
             ],
             [
                 "Intelligence,",
-                "junk"
+                "journal"
             ],
             [
                 "pp.",
@@ -12097,59 +12009,7 @@
             ],
             [
                 "11681175.",
-                "junk"
-            ],
-            [
-                "Boyan,",
-                "junk"
-            ],
-            [
-                "J.",
-                "junk"
-            ],
-            [
-                "A.,",
-                "journal"
-            ],
-            [
-                "&",
-                "junk"
-            ],
-            [
-                "Moore,",
-                "junk"
-            ],
-            [
-                "A.",
-                "author"
-            ],
-            [
-                "A.",
-                "author"
-            ],
-            [
-                "(1995).",
-                "junk"
-            ],
-            [
-                "Generalization",
-                "junk"
-            ],
-            [
-                "in",
-                "junk"
-            ],
-            [
-                "reinforcement",
-                "junk"
-            ],
-            [
-                "learning:",
-                "junk"
-            ],
-            [
-                "safely",
-                "junk"
+                "pages"
             ]
         ]
     ],
@@ -12158,7 +12018,7 @@
         [
             [
                 "Bertsekas,",
-                "junk"
+                "author"
             ],
             [
                 "D.",
@@ -12166,11 +12026,11 @@
             ],
             [
                 "P.",
-                "junk"
+                "author"
             ],
             [
                 "(1994).",
-                "junk"
+                "year"
             ],
             [
                 "A",
@@ -12178,36 +12038,36 @@
             ],
             [
                 "counter-example",
-                "junk"
+                "title"
             ],
             [
                 "to",
-                "junk"
+                "title"
             ],
             [
                 "temporal",
-                "junk"
+                "title"
             ],
             [
                 "dierences",
-                "junk"
+                "title"
             ],
             [
                 "learning.",
-                "junk"
+                "title"
             ],
             [
                 "Neural",
-                "junk"
+                "journal"
             ],
             [
                 "Com-",
-                "junk"
+                "journal"
             ]
         ]
     ],
     [
-        "Kirkpatrick, S., Gelatt, C. D., & Vecchi, M. P. (1983). Optimization by simulated annealing. Science, 220:671680.",
+        "Kirkpatrick, S., Gelatt, C. D., & Vecchi, M. P. (1983). Optimization by simulated annealing. Science, 220: 671680.",
         [
             [
                 "Kirkpatrick,",
@@ -12243,7 +12103,7 @@
             ],
             [
                 "P.",
-                "junk"
+                "author"
             ],
             [
                 "(1983).",
@@ -12270,8 +12130,12 @@
                 "journal"
             ],
             [
-                "220:671680.",
+                "220:",
                 "junk"
+            ],
+            [
+                "671680.",
+                "pages"
             ]
         ]
     ],
@@ -12304,7 +12168,7 @@
             ],
             [
                 "Johnson,",
-                "junk"
+                "author"
             ],
             [
                 "D.,",
@@ -12320,7 +12184,7 @@
             ],
             [
                 "P.",
-                "junk"
+                "author"
             ],
             [
                 "(1976).",
@@ -12357,7 +12221,7 @@
         [
             [
                 "Dehaene,",
-                "junk"
+                "author"
             ],
             [
                 "S.",
@@ -12365,7 +12229,7 @@
             ],
             [
                 "&",
-                "junk"
+                "author"
             ],
             [
                 "Changeux,",
@@ -12373,39 +12237,39 @@
             ],
             [
                 "P.",
-                "title"
+                "author"
             ],
             [
                 "(1991).",
-                "junk"
+                "year"
             ],
             [
                 "The",
-                "junk"
+                "title"
             ],
             [
                 "Wisconson",
-                "junk"
+                "title"
             ],
             [
                 "Card",
-                "junk"
+                "title"
             ],
             [
                 "Sorting",
-                "junk"
+                "title"
             ],
             [
                 "test:",
-                "junk"
+                "title"
             ],
             [
                 "Theoretical",
-                "junk"
+                "title"
             ],
             [
                 "analyses",
-                "junk"
+                "title"
             ],
             [
                 "and",
@@ -12413,7 +12277,7 @@
             ],
             [
                 "modelling",
-                "junk"
+                "title"
             ],
             [
                 "in",
@@ -12454,7 +12318,7 @@
             ],
             [
                 "R.",
-                "junk"
+                "author"
             ],
             [
                 "(1987).",
@@ -12494,11 +12358,11 @@
             ],
             [
                 "Complex",
-                "junk"
+                "journal"
             ],
             [
                 "Systems,",
-                "junk"
+                "journal"
             ]
         ]
     ],
@@ -12507,15 +12371,15 @@
         [
             [
                 "Patterson,",
-                "junk"
+                "author"
             ],
             [
                 "K.",
-                "junk"
+                "author"
             ],
             [
                 "E.,",
-                "junk"
+                "author"
             ],
             [
                 "Seidenberg,",
@@ -12543,35 +12407,35 @@
             ],
             [
                 "L.",
-                "junk"
+                "author"
             ],
             [
                 "(1990).",
-                "junk"
+                "year"
             ],
             [
                 "Connections",
-                "junk"
+                "title"
             ],
             [
                 "and",
-                "junk"
+                "title"
             ],
             [
                 "disconnections:",
-                "junk"
+                "title"
             ],
             [
                 "Acquired",
-                "junk"
+                "title"
             ],
             [
                 "dyslexia",
-                "junk"
+                "title"
             ],
             [
                 "in",
-                "junk"
+                "title"
             ],
             [
                 "a",
@@ -12579,7 +12443,7 @@
             ],
             [
                 "computational",
-                "junk"
+                "title"
             ],
             [
                 "model",
@@ -12591,23 +12455,23 @@
             ],
             [
                 "reading",
-                "junk"
+                "title"
             ],
             [
                 "processes.",
-                "junk"
+                "title"
             ],
             [
                 "In",
-                "title"
+                "junk"
             ],
             [
                 "R.",
-                "journal"
+                "junk"
             ],
             [
                 "G.",
-                "title"
+                "junk"
             ],
             [
                 "M.",
@@ -12623,19 +12487,19 @@
             ],
             [
                 "Parallel",
-                "junk"
+                "journal"
             ],
             [
                 "distributed",
-                "junk"
+                "journal"
             ],
             [
                 "processing:",
-                "junk"
+                "journal"
             ],
             [
                 "Implications",
-                "junk"
+                "journal"
             ]
         ]
     ],
@@ -12660,7 +12524,7 @@
             ],
             [
                 "G.",
-                "junk"
+                "author"
             ],
             [
                 "E.,",
@@ -12676,11 +12540,11 @@
             ],
             [
                 "T.",
-                "junk"
+                "author"
             ],
             [
                 "J.",
-                "junk"
+                "author"
             ],
             [
                 "(1985).",
@@ -12721,75 +12585,75 @@
         [
             [
                 "Kolen,",
-                "junk"
+                "author"
             ],
             [
                 "J.",
-                "junk"
+                "author"
             ],
             [
                 "F.",
-                "junk"
+                "author"
             ],
             [
                 "&",
-                "junk"
+                "author"
             ],
             [
                 "Pollack,",
-                "junk"
+                "author"
             ],
             [
                 "J.",
-                "junk"
+                "author"
             ],
             [
                 "B.",
-                "junk"
+                "author"
             ],
             [
                 "(1991).",
-                "junk"
+                "year"
             ],
             [
                 "Back",
-                "junk"
+                "title"
             ],
             [
                 "propagation",
-                "junk"
+                "title"
             ],
             [
                 "is",
-                "junk"
+                "title"
             ],
             [
                 "sensitive",
-                "junk"
+                "title"
             ],
             [
                 "to",
-                "junk"
+                "title"
             ],
             [
                 "initial",
-                "junk"
+                "title"
             ],
             [
                 "conditions.",
-                "junk"
+                "title"
             ],
             [
                 "In",
-                "title"
+                "junk"
             ],
             [
                 "R.",
-                "title"
+                "junk"
             ],
             [
                 "P.",
-                "author"
+                "junk"
             ],
             [
                 "Lippmann,",
@@ -12797,11 +12661,11 @@
             ],
             [
                 "J.",
-                "title"
+                "junk"
             ],
             [
                 "E.",
-                "title"
+                "junk"
             ],
             [
                 "Moody,",
@@ -12809,7 +12673,7 @@
             ],
             [
                 "&",
-                "title"
+                "junk"
             ],
             [
                 "D.",
@@ -12829,11 +12693,11 @@
             ],
             [
                 "Advances",
-                "junk"
+                "journal"
             ],
             [
                 "in",
-                "junk"
+                "journal"
             ],
             [
                 "Neural",
@@ -12841,15 +12705,15 @@
             ],
             [
                 "Information",
-                "junk"
+                "journal"
             ],
             [
                 "Processing",
-                "junk"
+                "journal"
             ],
             [
                 "Systems",
-                "junk"
+                "journal"
             ],
             [
                 "3",
@@ -12861,7 +12725,7 @@
             ],
             [
                 "860867).",
-                "junk"
+                "pages"
             ],
             [
                 "San",
@@ -12882,19 +12746,19 @@
         [
             [
                 "Barry,",
-                "junk"
+                "author"
             ],
             [
                 "C.",
-                "journal"
+                "author"
             ],
             [
                 "&",
-                "junk"
+                "author"
             ],
             [
                 "Richardson,",
-                "junk"
+                "author"
             ],
             [
                 "J.",
@@ -12902,7 +12766,7 @@
             ],
             [
                 "T.",
-                "junk"
+                "author"
             ],
             [
                 "E.",
@@ -12910,23 +12774,23 @@
             ],
             [
                 "(1988).",
-                "junk"
+                "year"
             ],
             [
                 "Accounts",
-                "junk"
+                "title"
             ],
             [
                 "of",
-                "junk"
+                "title"
             ],
             [
                 "oral",
-                "junk"
+                "title"
             ],
             [
                 "reading",
-                "junk"
+                "title"
             ],
             [
                 "in",
@@ -12934,11 +12798,11 @@
             ],
             [
                 "deep",
-                "junk"
+                "title"
             ],
             [
                 "dyslexia.",
-                "junk"
+                "title"
             ]
         ]
     ],
@@ -12947,27 +12811,27 @@
         [
             [
                 "Allport,",
-                "junk"
+                "author"
             ],
             [
                 "D.",
-                "junk"
+                "author"
             ],
             [
                 "A.",
-                "title"
+                "author"
             ],
             [
                 "(1985).",
-                "junk"
+                "year"
             ],
             [
                 "Distributed",
-                "junk"
+                "title"
             ],
             [
                 "memory,",
-                "junk"
+                "title"
             ],
             [
                 "modular",
@@ -12975,23 +12839,23 @@
             ],
             [
                 "systems",
-                "junk"
-            ],
-            [
-                "and",
-                "junk"
-            ],
-            [
-                "dysphasia.",
-                "junk"
-            ],
-            [
-                "In",
                 "title"
             ],
             [
+                "and",
+                "title"
+            ],
+            [
+                "dysphasia.",
+                "title"
+            ],
+            [
+                "In",
+                "junk"
+            ],
+            [
                 "S.",
-                "journal"
+                "junk"
             ],
             [
                 "K.",
@@ -13003,7 +12867,7 @@
             ],
             [
                 "&",
-                "author"
+                "junk"
             ],
             [
                 "R.",
@@ -13068,7 +12932,7 @@
             ],
             [
                 "a",
-                "journal"
+                "title"
             ],
             [
                 "statistical",
@@ -13089,7 +12953,7 @@
         ]
     ],
     [
-        "[1] Adam L. Berger, Stephen A. Della Pietra, and Vincent J. Della Pietra. A maximum entropy approach to natural language processing. Computational Linguistics, 22(1):3971, 1996.",
+        "[1] Adam L. Berger, Stephen A. Della Pietra, and Vincent J. Della Pietra. A maximum entropy approach to natural language processing. Computational Linguistics, 22(1): 3971, 1996.",
         [
             [
                 "[1]",
@@ -13184,8 +13048,12 @@
                 "journal"
             ],
             [
-                "22(1):3971,",
+                "22(1):",
                 "junk"
+            ],
+            [
+                "3971,",
+                "pages"
             ],
             [
                 "1996.",
@@ -13270,27 +13138,27 @@
             ],
             [
                 "Journal",
-                "junk"
+                "journal"
             ],
             [
                 "of",
-                "junk"
+                "journal"
             ],
             [
                 "Computer",
-                "junk"
+                "journal"
             ],
             [
                 "and",
-                "junk"
+                "journal"
             ],
             [
                 "System",
-                "junk"
+                "journal"
             ],
             [
                 "Sciences,",
-                "junk"
+                "journal"
             ],
             [
                 "55(1):119139,",
@@ -13302,7 +13170,7 @@
             ],
             [
                 "1997.",
-                "junk"
+                "year"
             ]
         ]
     ],
@@ -13339,7 +13207,7 @@
             ],
             [
                 "Improved",
-                "junk"
+                "title"
             ],
             [
                 "boosting",
@@ -13347,19 +13215,19 @@
             ],
             [
                 "algorithms",
-                "junk"
+                "title"
             ],
             [
                 "using",
-                "junk"
+                "title"
             ],
             [
                 "condence-rated",
-                "junk"
+                "title"
             ],
             [
                 "predictions.",
-                "junk"
+                "title"
             ],
             [
                 "Ma-",
@@ -13400,7 +13268,7 @@
             ],
             [
                 "BoosTexter:",
-                "junk"
+                "title"
             ],
             [
                 "A",
@@ -13408,27 +13276,27 @@
             ],
             [
                 "boosting-based",
-                "junk"
+                "title"
             ],
             [
                 "system",
-                "junk"
+                "title"
             ],
             [
                 "for",
-                "junk"
+                "title"
             ],
             [
                 "text",
-                "junk"
+                "title"
             ],
             [
                 "categorization.",
-                "junk"
+                "title"
             ],
             [
                 "Machine",
-                "junk"
+                "journal"
             ]
         ]
     ],
@@ -13542,39 +13410,6 @@
         ]
     ],
     [
-        "[Collins and Brooks1995] Collins, Michael and James",
-        [
-            [
-                "[Collins",
-                "junk"
-            ],
-            [
-                "and",
-                "junk"
-            ],
-            [
-                "Brooks1995]",
-                "junk"
-            ],
-            [
-                "Collins,",
-                "author"
-            ],
-            [
-                "Michael",
-                "author"
-            ],
-            [
-                "and",
-                "junk"
-            ],
-            [
-                "James",
-                "junk"
-            ]
-        ]
-    ],
-    [
         "[Katz1987] Katz, Slava M. 1987. Estimation of prob- abilities from sparse data for the language model component of a speech recognizer. IEEE Transac-",
         [
             [
@@ -13659,15 +13494,15 @@
             ],
             [
                 "recognizer.",
-                "junk"
+                "title"
             ],
             [
                 "IEEE",
-                "junk"
+                "journal"
             ],
             [
                 "Transac-",
-                "junk"
+                "journal"
             ]
         ]
     ],
@@ -13700,27 +13535,27 @@
             ],
             [
                 "Measuring",
-                "junk"
+                "title"
             ],
             [
                 "the",
-                "junk"
+                "title"
             ],
             [
                 "Impact",
-                "junk"
+                "title"
             ],
             [
                 "of",
-                "journal"
+                "title"
             ],
             [
                 "Reuse",
-                "junk"
+                "title"
             ],
             [
                 "on",
-                "journal"
+                "title"
             ],
             [
                 "Quality",
@@ -13728,11 +13563,11 @@
             ],
             [
                 "and",
-                "junk"
+                "title"
             ],
             [
                 "Productivity",
-                "junk"
+                "title"
             ],
             [
                 "in",
@@ -13773,43 +13608,43 @@
             ],
             [
                 "Measuring",
-                "junk"
+                "title"
             ],
             [
                 "and",
-                "author"
+                "title"
             ],
             [
                 "Assessing",
-                "junk"
+                "title"
             ],
             [
                 "Maintainability",
-                "junk"
+                "title"
             ],
             [
                 "at",
-                "junk"
+                "title"
             ],
             [
                 "the",
-                "junk"
+                "title"
             ],
             [
                 "End",
-                "junk"
+                "title"
             ],
             [
                 "of",
-                "junk"
+                "title"
             ],
             [
                 "High-Level",
-                "junk"
+                "title"
             ],
             [
                 "Design,",
-                "junk"
+                "title"
             ],
             [
                 "IEEE",
@@ -13817,7 +13652,7 @@
             ],
             [
                 "Conference",
-                "junk"
+                "journal"
             ],
             [
                 "on",
@@ -13829,7 +13664,7 @@
             ],
             [
                 "Maintenance,",
-                "junk"
+                "journal"
             ],
             [
                 "Montreal,",
@@ -13845,7 +13680,7 @@
             ],
             [
                 "1993.",
-                "junk"
+                "year"
             ]
         ]
     ],
@@ -13866,7 +13701,7 @@
             ],
             [
                 "The",
-                "journal"
+                "title"
             ],
             [
                 "Process",
@@ -13898,7 +13733,7 @@
             ],
             [
                 "Techanical",
-                "junk"
+                "journal"
             ]
         ]
     ],
@@ -14057,7 +13892,7 @@
             ],
             [
                 "Hastad,",
-                "junk"
+                "author"
             ],
             [
                 "R.",
@@ -14093,7 +13928,7 @@
             ],
             [
                 "A",
-                "author"
+                "title"
             ],
             [
                 "pseudorandom",
@@ -14109,7 +13944,7 @@
             ],
             [
                 "any",
-                "junk"
+                "title"
             ],
             [
                 "one-way",
@@ -14117,23 +13952,23 @@
             ],
             [
                 "function.",
-                "junk"
+                "title"
             ],
             [
                 "SIAM",
-                "junk"
+                "journal"
             ],
             [
                 "Journal",
-                "junk"
+                "journal"
             ],
             [
                 "on",
-                "junk"
+                "journal"
             ],
             [
                 "Computing,",
-                "junk"
+                "journal"
             ],
             [
                 "28(4):13641396",
@@ -14145,12 +13980,12 @@
             ],
             [
                 "1999.",
-                "junk"
+                "year"
             ]
         ]
     ],
     [
-        "F. A. P. Petitcolas, R. J. Anderson, and M. J. Kuhn. Information Hiding  A Survey. Proceedings of the IEEE, 87(7):10621078, 1999.",
+        "F. A. P. Petitcolas, R. J. Anderson, and M. J. Kuhn. Information Hiding A Survey. Proceedings of the IEEE, 87(7):10621078, 1999.",
         [
             [
                 "F.",
@@ -14205,16 +14040,12 @@
                 "title"
             ],
             [
-                "",
-                "title"
-            ],
-            [
                 "A",
                 "title"
             ],
             [
                 "Survey.",
-                "junk"
+                "title"
             ],
             [
                 "Proceedings",
@@ -14230,7 +14061,7 @@
             ],
             [
                 "IEEE,",
-                "junk"
+                "journal"
             ],
             [
                 "87(7):10621078,",
@@ -14344,23 +14175,23 @@
             ],
             [
                 "SIAM",
-                "junk"
+                "journal"
             ],
             [
                 "Journal",
-                "junk"
+                "journal"
             ],
             [
                 "on",
-                "junk"
+                "journal"
             ],
             [
                 "Com-",
-                "junk"
+                "journal"
             ],
             [
                 "puting,",
-                "junk"
+                "journal"
             ],
             [
                 "30(2):391437",
@@ -14373,111 +14204,6 @@
             [
                 "2000.",
                 "year"
-            ]
-        ]
-    ],
-    [
-        "Y = {M | M always halts, x < KC([M]) s.t. [M](x) = 1} N = {M | M always halts, x M(x) = 0}",
-        [
-            [
-                "Y",
-                "junk"
-            ],
-            [
-                "=",
-                "junk"
-            ],
-            [
-                "{M",
-                "junk"
-            ],
-            [
-                "|",
-                "junk"
-            ],
-            [
-                "M",
-                "junk"
-            ],
-            [
-                "always",
-                "junk"
-            ],
-            [
-                "halts,",
-                "junk"
-            ],
-            [
-                "x",
-                "junk"
-            ],
-            [
-                "<",
-                "junk"
-            ],
-            [
-                "KC([M])",
-                "junk"
-            ],
-            [
-                "s.t.",
-                "junk"
-            ],
-            [
-                "[M](x)",
-                "junk"
-            ],
-            [
-                "=",
-                "junk"
-            ],
-            [
-                "1}",
-                "year"
-            ],
-            [
-                "N",
-                "title"
-            ],
-            [
-                "=",
-                "junk"
-            ],
-            [
-                "{M",
-                "junk"
-            ],
-            [
-                "|",
-                "junk"
-            ],
-            [
-                "M",
-                "junk"
-            ],
-            [
-                "always",
-                "junk"
-            ],
-            [
-                "halts,",
-                "junk"
-            ],
-            [
-                "x",
-                "junk"
-            ],
-            [
-                "M(x)",
-                "junk"
-            ],
-            [
-                "=",
-                "junk"
-            ],
-            [
-                "0}",
-                "junk"
             ]
         ]
     ],
@@ -14591,7 +14317,7 @@
             ],
             [
                 "ecient",
-                "junk"
+                "title"
             ],
             [
                 "protocols.",
@@ -14615,31 +14341,31 @@
             ],
             [
                 "First",
-                "junk"
+                "journal"
             ],
             [
                 "Annual",
-                "junk"
+                "journal"
             ],
             [
                 "Conference",
-                "junk"
+                "journal"
             ],
             [
                 "on",
-                "junk"
+                "journal"
             ],
             [
                 "Computer",
-                "junk"
+                "journal"
             ],
             [
                 "and",
-                "junk"
+                "journal"
             ],
             [
                 "Com-",
-                "junk"
+                "journal"
             ]
         ]
     ],
@@ -14696,7 +14422,7 @@
             ],
             [
                 "identication",
-                "junk"
+                "title"
             ],
             [
                 "and",
@@ -14749,7 +14475,7 @@
             ],
             [
                 "Ecient",
-                "junk"
+                "jutitlenk"
             ],
             [
                 "Pseudo-random",
@@ -14765,35 +14491,35 @@
             ],
             [
                 "38th",
-                "junk"
+                "journal"
             ],
             [
                 "Annual",
-                "junk"
+                "journal"
             ],
             [
                 "Symposium",
-                "junk"
+                "journal"
             ],
             [
                 "on",
-                "junk"
+                "journal"
             ],
             [
                 "Foundations",
-                "junk"
+                "journal"
             ],
             [
                 "of",
-                "junk"
+                "journal"
             ],
             [
                 "Computer",
-                "junk"
+                "journal"
             ],
             [
                 "Science,",
-                "junk"
+                "journal"
             ],
             [
                 "pages",
@@ -14805,7 +14531,7 @@
             ],
             [
                 "467,",
-                "junk"
+                "pages"
             ],
             [
                 "Miami",
@@ -14842,7 +14568,7 @@
         [
             [
                 "B.",
-                "title"
+                "author"
             ],
             [
                 "Barak.",
@@ -14850,19 +14576,19 @@
             ],
             [
                 "Can",
-                "junk"
+                "title"
             ],
             [
                 "We",
-                "junk"
+                "title"
             ],
             [
                 "Obfuscate",
-                "junk"
+                "title"
             ],
             [
                 "Programs?",
-                "junk"
+                "title"
             ],
             [
                 "Essay,",
@@ -14870,7 +14596,7 @@
             ],
             [
                 "2002.",
-                "junk"
+                "year"
             ],
             [
                 "http://www.cs.princeton.edu/",
@@ -15008,7 +14734,7 @@
             ],
             [
                 "efcient",
-                "junk"
+                "title"
             ],
             [
                 "and",
@@ -15048,19 +14774,19 @@
             ],
             [
                 "USENIX",
-                "junk"
+                "journal"
             ],
             [
                 "Annual",
-                "junk"
+                "journal"
             ],
             [
                 "Technical",
-                "junk"
+                "journal"
             ],
             [
                 "Conference,",
-                "junk"
+                "journal"
             ],
             [
                 "June",
@@ -15129,7 +14855,7 @@
             ],
             [
                 "Scalable,",
-                "junk"
+                "title"
             ],
             [
                 "distributed",
@@ -15194,7 +14920,7 @@
             ],
             [
                 "Random",
-                "junk"
+                "title"
             ],
             [
                 "early",
@@ -15226,19 +14952,19 @@
             ],
             [
                 "IEEE/ACM",
-                "junk"
+                "journal"
             ],
             [
                 "Transactions",
-                "junk"
+                "journal"
             ],
             [
                 "on",
-                "junk"
+                "journal"
             ],
             [
                 "Networking,",
-                "junk"
+                "journal"
             ],
             [
                 "1(4):397413,",
@@ -15319,7 +15045,7 @@
             ],
             [
                 "A",
-                "author"
+                "title"
             ],
             [
                 "hierarchical",
@@ -15359,23 +15085,23 @@
             ],
             [
                 "1996",
-                "junk"
+                "year"
             ],
             [
                 "USENIX",
-                "junk"
+                "journal"
             ],
             [
                 "Annual",
-                "junk"
+                "journal"
             ],
             [
                 "Technical",
-                "junk"
+                "journal"
             ],
             [
                 "Conference,",
-                "junk"
+                "journal"
             ],
             [
                 "pages",
@@ -15404,31 +15130,31 @@
             ],
             [
                 "G.",
-                "junk"
+                "author"
             ],
             [
                 "Banga,",
-                "junk"
+                "author"
             ],
             [
                 "J.",
-                "junk"
+                "author"
             ],
             [
                 "C.",
-                "junk"
+                "author"
             ],
             [
                 "Mogul,",
-                "junk"
+                "author"
             ],
             [
                 "and",
-                "junk"
+                "author"
             ],
             [
                 "P.",
-                "title"
+                "author"
             ],
             [
                 "Druschel.",
@@ -15440,27 +15166,27 @@
             ],
             [
                 "scalable",
-                "junk"
+                "title"
             ],
             [
                 "and",
-                "author"
+                "title"
             ],
             [
                 "explicit",
-                "junk"
+                "title"
             ],
             [
                 "event",
-                "junk"
+                "title"
             ],
             [
                 "delivery",
-                "junk"
+                "title"
             ],
             [
                 "mechanism",
-                "junk"
+                "title"
             ],
             [
                 "for",
@@ -15468,7 +15194,7 @@
             ],
             [
                 "UNIX.",
-                "junk"
+                "title"
             ],
             [
                 "In",
@@ -15521,7 +15247,7 @@
             ],
             [
                 "trol.",
-                "junk"
+                "title"
             ],
             [
                 "In",
@@ -15537,11 +15263,11 @@
             ],
             [
                 "ACM",
-                "junk"
+                "journal"
             ],
             [
                 "SIGCOMM",
-                "junk"
+                "journal"
             ],
             [
                 "1991,",
@@ -15590,7 +15316,7 @@
             ],
             [
                 "SEDA:",
-                "junk"
+                "title"
             ],
             [
                 "An",
@@ -15639,7 +15365,7 @@
             ],
             [
                 "Marcus,",
-                "junk"
+                "author"
             ],
             [
                 "L.,",
@@ -15651,11 +15377,11 @@
             ],
             [
                 "Tarlecki,",
-                "junk"
+                "author"
             ],
             [
                 "A.",
-                "junk"
+                "author"
             ],
             [
                 ".",
@@ -15663,7 +15389,7 @@
             ],
             [
                 "Existence,",
-                "junk"
+                "title"
             ]
         ]
     ],
@@ -15821,11 +15547,11 @@
             ],
             [
                 "1997.",
-                "junk"
+                "year"
             ],
             [
                 "A",
-                "author"
+                "title"
             ],
             [
                 "reliable",
@@ -15873,19 +15599,19 @@
             ],
             [
                 "IEEE/ACM",
-                "junk"
+                "journal"
             ],
             [
                 "Trans.",
-                "junk"
+                "journal"
             ],
             [
                 "Netw.",
-                "junk"
+                "journal"
             ],
             [
                 "5,",
-                "pages"
+                "junk"
             ],
             [
                 "6,",
@@ -16011,11 +15737,11 @@
             ],
             [
                 "Engineering",
-                "junk"
+                "journal"
             ],
             [
                 "of",
-                "junk"
+                "journal"
             ]
         ]
     ],
@@ -16112,11 +15838,11 @@
             ],
             [
                 "12th",
-                "junk"
+                "journal"
             ],
             [
                 "ACM",
-                "junk"
+                "journal"
             ]
         ]
     ],
@@ -16157,7 +15883,7 @@
             ],
             [
                 "Log-based",
-                "junk"
+                "title"
             ],
             [
                 "receiver-reliable",
@@ -16169,7 +15895,7 @@
             ],
             [
                 "for",
-                "junk"
+                "title"
             ],
             [
                 "dis-",
@@ -16185,7 +15911,7 @@
             ],
             [
                 "simulation.",
-                "junk"
+                "title"
             ],
             [
                 "In",
@@ -16254,7 +15980,7 @@
             ],
             [
                 "1999.",
-                "junk"
+                "year"
             ],
             [
                 "Bimodal",
@@ -16441,7 +16167,7 @@
             ],
             [
                 "A.",
-                "journal"
+                "author"
             ],
             [
                 "D.",
@@ -16465,7 +16191,7 @@
             ],
             [
                 "1983.",
-                "junk"
+                "year"
             ],
             [
                 "Implement-",
@@ -16485,7 +16211,7 @@
             ],
             [
                 "calls.",
-                "junk"
+                "title"
             ],
             [
                 "In",
