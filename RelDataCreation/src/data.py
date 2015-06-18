@@ -58,6 +58,7 @@ class DataStore():
 
 class Post():
     def __init__(self, string):
+        # self.content = filter(lambda x: x not in punctuation or x is '-', string.strip()).upper()
         self.content = string.strip().upper()
 
     def find_attr(self, attr):

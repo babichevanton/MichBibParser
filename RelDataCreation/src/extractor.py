@@ -40,7 +40,7 @@ class PostExplorer():
         else:
             # self.attr_classifier = OneVsRestClassifier(SVC(kernel='linear', probability=True), n_jobs=-1)
             self.attr_classifier = LogisticRegression()
-            self.multisvm_train(store, 1, multisvm_cnt)
+            self.attrs_train(store, 1, multisvm_cnt)
             with open(attr_model, "wb") as model:
                 pickle.dump(self.attr_classifier, model)
             with open(decoder, "wb") as file:
@@ -168,7 +168,7 @@ class PostExplorer():
                 schema_index = ind
         return cands[schema_index]
 
-    def multisvm_train(self, store, begin, end):
+    def attrs_train(self, store, begin, end):
         vectors = []
         classes = []
         bad = 0
