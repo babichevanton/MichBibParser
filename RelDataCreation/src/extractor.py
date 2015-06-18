@@ -17,7 +17,7 @@ from metrics import smith_waterman
 
 
 class PostExplorer():
-    def __init__(self, rs, store, numofattr, schema_model, svm_cnt, attr_model, multisvm_cnt, decoder):
+    def __init__(self, rs, store, numofattr, schema_model, svm_cnt, attr_model, multisvm_cnt):
         self.count = numofattr
         self.attributes = []
         for cand in rs:
@@ -35,16 +35,16 @@ class PostExplorer():
         if exists(attr_model):
             with open(attr_model, "rb") as model:
                 self.attr_classifier = pickle.load(model)
-            with open(decoder, "rb") as file:
-                self.attr_code = pickle.load(file)
+            # with open(decoder, "rb") as file:
+            #     self.attr_code = pickle.load(file)
         else:
             # self.attr_classifier = OneVsRestClassifier(SVC(kernel='linear', probability=True), n_jobs=-1)
             self.attr_classifier = LogisticRegression()
             self.attrs_train(store, 1, multisvm_cnt)
             with open(attr_model, "wb") as model:
                 pickle.dump(self.attr_classifier, model)
-            with open(decoder, "wb") as file:
-                pickle.dump(self.attr_code, file)
+            # with open(decoder, "wb") as file:
+            #     pickle.dump(self.attr_code, file)
 
     def create_scores(self, str1, str2, tok_sc=True):
         vector = []
