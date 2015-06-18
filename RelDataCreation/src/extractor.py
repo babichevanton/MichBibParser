@@ -29,7 +29,7 @@ class PostExplorer():
                 self.schema_classifier = pickle.load(model)
         else:
             self.schema_classifier = SVC(kernel='linear', probability=True)
-            self.svm_train(store, 1, svm_cnt)
+            self.schema_train(store, 1, svm_cnt)
             with open(schema_model, "wb") as model:
                 pickle.dump(self.schema_classifier, model)
         if exists(attr_model):
@@ -129,7 +129,7 @@ class PostExplorer():
                     vectors[v_ind][ind] = 0.0
         return vectors
 
-    def svm_train(self, store, begin, end):
+    def schema_train(self, store, begin, end):
         vectors = []
         targets = []
         bad = 0

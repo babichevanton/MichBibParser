@@ -78,7 +78,6 @@ if __name__ == '__main__':
     files = ['res1.json', 'res2.json', 'res3.json', 'res4.json']
     res = construct_results(files)
     check = construct_check('../data/test.json')
-    # check = construct_check('../data/check_11034.txt')
 
     attrs = [u'author', u'title', u'journal', u'year', u'pages']
 
