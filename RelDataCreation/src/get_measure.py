@@ -26,8 +26,8 @@ def construct_check(file):
 def get_f1(results, check, attrs):
     stat = {}
     for attr in attrs:
-        stat[attr] = {'tp': 0, 'tn': 0, 'fp': 0, 'fn': 0}
-    stat[u'all'] = {'tp': 0, 'tn': 0, 'fp': 0, 'fn': 0}
+        stat[attr] = {'tp': 0, 'fp': 0, 'fn': 0}
+    stat[u'all'] = {'tp': 0, 'fp': 0, 'fn': 0}
 
     def get_attr(tokens, attr):
         res = []
@@ -37,28 +37,20 @@ def get_f1(results, check, attrs):
         return res
 
     for record in results:
-        for attr in attrs:
-            res_attr = get_attr(results[record], attr)
-            check_attr = get_attr(check[record], attr)
-            if check_attr:
+        for res_label, check_label  in zip(map(lambda x: x[1], results[record]), map(lambda x: x[1], check[record])):
+            if check_label != u'junk':
                 # positive
-                if res_attr == check_attr:
+                if res_label == check_label:
                     # true
-                    stat[attr]['tp'] += 1
+                    stat[check_label]['tp'] += 1
                     stat[u'all']['tp'] += 1
                 else:
                     # false
-                    stat[attr]['fp'] += 1
+                    stat[check_label]['fp'] += 1
                     stat[u'all']['fp'] += 1
-            else:
-                # negative
-                if res_attr == check_attr:
-                    # true
-                    stat[attr]['tn'] += 1
-                    stat[u'all']['tn'] += 1
-                else:
-                    # false
-                    stat[attr]['fn'] += 1
+            elif res_label != check_label:
+                    # false negative
+                    stat[res_label]['fn'] += 1
                     stat[u'all']['fn'] += 1
 
     res_stat = {}
@@ -77,7 +69,7 @@ def get_f1(results, check, attrs):
 if __name__ == '__main__':
     files = ['res1.json', 'res2.json', 'res3.json', 'res4.json']
     res = construct_results(files)
-    check = construct_check('../data/test.json')
+    check = construct_check('../data/check_19130.txt')
 
     attrs = [u'author', u'title', u'journal', u'year', u'pages']
 
