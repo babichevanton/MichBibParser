@@ -96,7 +96,7 @@ if __name__ == '__main__':
             else:
                 post_attrs.append((tok, 'junk'))
             # print post_attrs[-1]
-        res.append((sample[u'name'], post_attrs))
+        res.append((sample[u'name'], (sample[u'attr'], post_attrs)))
         print str(i) + '/' + str(len(samples))
 
     with open(dir + resfile, 'w') as output:

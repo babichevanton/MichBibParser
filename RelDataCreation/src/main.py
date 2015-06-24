@@ -72,7 +72,7 @@ if __name__ == "__main__":
                 json.dump({}, output)
         with open(datadir + resultfile, "r") as input:
             data = json.load(input)
-        data[text] = result
+        data[text] = {'schema': schema, 'attrs': result}
         with open(datadir + resultfile, "w") as output:
             json.dump(data, output)
 
