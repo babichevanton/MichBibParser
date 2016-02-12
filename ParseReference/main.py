@@ -203,7 +203,7 @@ def main(size):
     with open(accfile, 'w') as output:
         json.dump(acc_info, output)
 
-    print 'Yo-ho-ho, motherfucker!!!'
+    print 'Yipee-ki-yay, motherfucker!'
 
 
 def fp_data_gatherer(train_ind, test_ind, datafile):
