@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ReferenceSets>
+     <ReferenceSet> 
+	  <Name>linkstrain</Name>
+	  <Attributes>
+	       <Attr>author</Attr>
+	       <Attr>title</Attr>
+	       <Attr>journal</Attr>
+	       <Attr>year</Attr>
+	       <Attr>pages</Attr>
+	  </Attributes>
+	  <Database>
+	       <URL>jdbc:mysql://localhost:3306/bsl_papers</URL>
+	       <Login>root</Login>
+	       <Password>1111</Password>
+	       <ID_Attr>id_link</ID_Attr>
+	       <TableName>linkstrain</TableName>
+	  </Database>
+     </ReferenceSet>
+</ReferenceSets>

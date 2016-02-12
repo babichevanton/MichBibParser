@@ -1,0 +1,14 @@
+<Data>
+ <AttributeSet>
+  <Attribute>author</Attribute>
+  <Attribute>title</Attribute>
+  <Attribute>journal</Attribute>
+  <Attribute>year</Attribute>
+  <Attribute>pages</Attribute>
+ </AttributeSet>
+ <MethodSet>
+  <Method>token</Method>
+  <Method>firstN_3</Method>
+  <Method>ngram_4</Method>
+ </MethodSet>
+</Data>
